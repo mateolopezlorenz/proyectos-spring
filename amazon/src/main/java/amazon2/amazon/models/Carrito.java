@@ -23,15 +23,16 @@ public class Carrito {
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
+    private Integer cantidad = 1;
 
     //Constructor
 
     public Carrito() {
     }
 
-    public Carrito(Long id, Product product) {
-        this.id = id;
+    public Carrito(Product product , Integer cantidad) {
         this.product = product;
+        this.cantidad = cantidad;
     }
 
     //Getters y Setters
@@ -47,5 +48,17 @@ public class Carrito {
     }
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Carrito{id=" + id + ", product=" + product + ", cantidad=" + cantidad + "} <br>";
     }
 }
