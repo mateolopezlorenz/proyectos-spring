@@ -34,7 +34,7 @@ public class ControllerCarrito {
         
         } catch(Exception e){
             return ResponseEntity
-                    .status(HttpStatus.CREATED)
+                    .status(HttpStatus.UNPROCESSABLE_CONTENT)
                     .body("Error al añadir el producto: " + e.getMessage());
         }
     }
