@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "product", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"name"}),
-    @UniqueConstraint(columnNames = {"price"})
 })
 public class Product {
     
